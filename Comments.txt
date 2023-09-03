@@ -1,0 +1,34 @@
+// Варіант №2
+
+// const list = document.querySelector('.gallery');
+// const markUp = createMarcup(galleryItems);
+// list.addEventListener('click', handleListClick);
+// list.insertAdjacentHTML ('beforeend', markUp);
+
+// function createMarcup (arr) {
+//     return arr.map(({ preview, original, description }) => {
+//         return `<li class="gallery__item js-gallary-item" data-preview="${preview}">
+//         <a class="gallery__link" href="${original}" target="_self" rel="noopener norefferer nofollow">
+//         <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}" />
+//         </a>
+//         </li>`
+//     }).join('');
+// }
+
+// function handleListClick(event) {
+//     if (event.target === event.currentTarget) {
+//         return;
+//     };
+
+// const targetElement = event.target.closest('.js-gallary-item');
+// const gallaryDesc = targetElement.dataset.preview;
+// const gallaryInfo = galleryItems.find(gallery => gallery.preview === gallaryDesc);
+
+//  const instance = basicLightbox.create(
+//         `<div class="modal">
+//         <img src="${gallaryInfo.original}" alt="${gallaryInfo.description}"/>
+//         </div>`
+//     )
+//     // console.log(instance);
+//     instance.show();
+// };
