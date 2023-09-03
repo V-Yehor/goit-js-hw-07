@@ -6,6 +6,7 @@ console.log(galleryItems);
 const list = document.querySelector('.gallery');
 const markUp = createMarcup(galleryItems);
 list.addEventListener('click', handleListClick);
+// list.addEventListener('keydown', pressEsc);
 
 function createMarcup (arr) {
     return arr.map(({ preview, original, description }) => {
@@ -20,6 +21,7 @@ function createMarcup (arr) {
 list.innerHTML = markUp;
 
 function handleListClick(event) {
+    event.preventDefault();
     if (event.target === event.currentTarget) {
         return;
     }
@@ -34,3 +36,8 @@ function handleListClick(event) {
     // console.log(instance);
     instance.show();
 }
+
+// function pressEsc (event) {
+//     console.log(event.code);
+// }
+// pressEsc();
