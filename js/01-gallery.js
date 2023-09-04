@@ -31,6 +31,7 @@ function handleListClick(event) {
     const instance = basicLightbox.create(
         `<div class="modal">
         <img src="${originalUrl}"/>
+<<<<<<< Updated upstream
         </div>`
     )
     // console.log(instance);
@@ -41,3 +42,23 @@ function handleListClick(event) {
 //     console.log(event.code);
 // }
 // pressEsc();
+=======
+        </div>`, {onShow: () => {
+        window.addEventListener('keydown', pressEsc)
+    },
+    onClose: () => {
+        window.removeEventListener('keydown', pressEsc)
+    }})
+    // console.log(instance);
+    instance.show();
+
+    function pressEsc(event) {
+    if (event.key === 'Escape') {
+        instance.close();
+    }
+}
+
+}
+
+
+>>>>>>> Stashed changes
